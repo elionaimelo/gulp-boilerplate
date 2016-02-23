@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
-var minifycss = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var less = require('gulp-less');
 var browserSync = require('browser-sync');
 
@@ -43,7 +43,7 @@ gulp.task('styles', function(){
 		}))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
+    .pipe(cssnano())
     .pipe(gulp.dest('dist/styles/'))
     .pipe(browserSync.reload({stream:true}))
 });
