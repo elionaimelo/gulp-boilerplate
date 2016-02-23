@@ -9,12 +9,12 @@
   <meta name="description" content="">
   <meta name="keywords" content="" />
   <meta name="author" content="">
-  
+
   <link rel="stylesheet" href="dist/styles/screen.min.css">
 </head>
 <body>
 
-  <!--[if lt IE 7]>
+  <!--[if lt IE 8]>
       <p class="browsehappy">Seu navegador está <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para uma melhor navegação</p>
   <![endif]-->
 
