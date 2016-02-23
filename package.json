@@ -1,13 +1,12 @@
 {
-  "name": "Quench",
+  "name": "website",
   "version": "1.0.0",
   "description": "A Gulp file and project generator.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Quench",
-  "license": "ISC",
+  "author": "Elionai Melo",
   "devDependencies": {
     "browser-sync": "2.6.5",
     "gulp": "3.9.1",
