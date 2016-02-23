@@ -9,15 +9,17 @@ var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
 var cssnano = require('gulp-cssnano');
 var less = require('gulp-less');
+var connect = require('gulp-connect-php');
 var browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-       baseDir: "./"
-    }
+  connect.server({}, function (){
+    browserSync({
+      proxy: '127.0.0.1:8000'
+    });
   });
 });
+
 
 gulp.task('bs-reload', function () {
   browserSync.reload();
@@ -66,5 +68,5 @@ gulp.task('scripts', function(){
 gulp.task('default', ['browser-sync'], function(){
   gulp.watch("src/styles/**/*.less", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
+  gulp.watch("*.html", "*.php", ['bs-reload']);
 });
